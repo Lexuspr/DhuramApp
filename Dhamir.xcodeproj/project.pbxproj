@@ -13,6 +13,11 @@
 		28D75C4F20DAB529001AF15F /* Dhamir.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C4D20DAB529001AF15F /* Dhamir.xcdatamodeld */; };
 		28D75C5120DAB52A001AF15F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D75C5020DAB52A001AF15F /* Assets.xcassets */; };
 		28D75C5420DAB52A001AF15F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D75C5220DAB52A001AF15F /* LaunchScreen.storyboard */; };
+		28D75C6020DD5453001AF15F /* usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C5F20DD5453001AF15F /* usuario.swift */; };
+		28D75C6420E184F2001AF15F /* MenuPrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C6320E184F2001AF15F /* MenuPrincipalViewController.swift */; };
+		28D75C6620E29A3C001AF15F /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C6520E29A3C001AF15F /* RegistrarViewController.swift */; };
+		28D75C6820E2A164001AF15F /* RegistrarFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C6720E2A164001AF15F /* RegistrarFinalViewController.swift */; };
+		28D75C6A20E2AE03001AF15F /* validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C6920E2AE03001AF15F /* validate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		28D75C5020DAB52A001AF15F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28D75C5320DAB52A001AF15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28D75C5520DAB52A001AF15F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D75C5F20DD5453001AF15F /* usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuario.swift; sourceTree = "<group>"; };
+		28D75C6320E184F2001AF15F /* MenuPrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPrincipalViewController.swift; sourceTree = "<group>"; };
+		28D75C6520E29A3C001AF15F /* RegistrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
+		28D75C6720E2A164001AF15F /* RegistrarFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarFinalViewController.swift; sourceTree = "<group>"; };
+		28D75C6920E2AE03001AF15F /* validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = validate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				28D75C5220DAB52A001AF15F /* LaunchScreen.storyboard */,
 				28D75C5520DAB52A001AF15F /* Info.plist */,
 				28D75C4D20DAB529001AF15F /* Dhamir.xcdatamodeld */,
+				28D75C5F20DD5453001AF15F /* usuario.swift */,
+				28D75C6320E184F2001AF15F /* MenuPrincipalViewController.swift */,
+				28D75C6520E29A3C001AF15F /* RegistrarViewController.swift */,
+				28D75C6720E2A164001AF15F /* RegistrarFinalViewController.swift */,
+				28D75C6920E2AE03001AF15F /* validate.swift */,
 			);
 			path = Dhamir;
 			sourceTree = "<group>";
@@ -138,8 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D75C6820E2A164001AF15F /* RegistrarFinalViewController.swift in Sources */,
+				28D75C6420E184F2001AF15F /* MenuPrincipalViewController.swift in Sources */,
+				28D75C6020DD5453001AF15F /* usuario.swift in Sources */,
+				28D75C6A20E2AE03001AF15F /* validate.swift in Sources */,
 				28D75C4920DAB529001AF15F /* ViewController.swift in Sources */,
 				28D75C4720DAB529001AF15F /* AppDelegate.swift in Sources */,
+				28D75C6620E29A3C001AF15F /* RegistrarViewController.swift in Sources */,
 				28D75C4F20DAB529001AF15F /* Dhamir.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
