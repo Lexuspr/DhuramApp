@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                 print(self.users.count)
                 let alertaEx = UIAlertController(title: "Exito!!!!", message: "Te logeaste correctamente", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Ok", style: .default, handler: {(action) in
-                    self.performSegue(withIdentifier: "logeadoSegue", sender: nil)
+                    self.performSegue(withIdentifier: "logeadoSegue", sender: self.users)
                 })
                 alertaEx.addAction(okAction)
                 self.present(alertaEx, animated: true, completion: nil)
@@ -102,5 +102,13 @@ class ViewController: UIViewController {
         }.resume()
         print("task resumido")
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "logeadoSegue" {
+            let menuPrincipalVC = segue.destination.childViewControllers[1] as! ListUsuariosViewController
+            menuPrincipalVC.usuario = sender as! [Result]
+        }
+    }
+    
 }
 

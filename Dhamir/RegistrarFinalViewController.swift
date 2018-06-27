@@ -15,7 +15,7 @@ class RegistrarFinalViewController: UIViewController {
     
     var datosUsuario:Dictionary<String, Any> = [:]
     
-    var users:[Result] = []
+    var users:[ResultR] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +71,8 @@ class RegistrarFinalViewController: UIViewController {
                 do {
                     //let dict = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves)
                     //print("entro segundo catch")
-                    self.users = [try JSONDecoder().decode(Result.self, from: data!)]
+                    self.users = [try JSONDecoder().decode(ResultR.self, from: data!)]
+                    print(self.users)
                     //print("Si se valido")
                     DispatchQueue.main.async {
                         completed()
@@ -82,6 +83,7 @@ class RegistrarFinalViewController: UIViewController {
                     /*print("Aqui comienza el error catch################")
                      print(error)*/
                     //print("Entro al catch error :v")
+                    print(error)
                     DispatchQueue.main.async {
                         completed()
                     }
