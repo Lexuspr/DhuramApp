@@ -107,6 +107,8 @@ class ViewController: UIViewController {
         if segue.identifier == "logeadoSegue" {
             let menuPrincipalVC = segue.destination.childViewControllers[1] as! ListUsuariosViewController
             menuPrincipalVC.usuario = sender as! [Result]
+            let perfilVC = segue.destination.childViewControllers[0] as! PerfilViewController
+            perfilVC.usuario = sender as! [Result]
         }
     }
     

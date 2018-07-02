@@ -20,12 +20,12 @@ class ListUsuariosViewController: UIViewController, UITableViewDelegate, UITable
         tableView.dataSource = self
         tableView.delegate = self
         token = usuario[0].token
-        print("didload")
-        print(lista_usuarios)
+//        print("didload")
+//        print(lista_usuarios)
         // Do any additional setup after loading the view.
         let url = "http://localhost:6060/api/user/"
         listarUsuarios(ruta: url, token: token){
-            print("did load listar")
+//            print("did load listar")
             self.tableView.reloadData()
         }
 //        print(lista_usuarios)
@@ -38,7 +38,7 @@ class ListUsuariosViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if lista_usuarios.count != 0{
-            return lista_usuarios[0].count
+            return lista_usuarios[0].count!
         } else{
             return 0
         }

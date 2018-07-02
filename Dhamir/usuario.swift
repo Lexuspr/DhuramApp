@@ -18,9 +18,13 @@ struct ResultR: Codable {
     let data: UsuarioR
     let token: String
 }
+
 struct Usuarios: Codable {
-    let count: Int
+    let count: Int?
     let data: [Usuario]
+}
+struct UsuarioU: Codable {
+    let data: Usuario
 }
 /*
 struct Mensaje: Codable {
@@ -46,7 +50,9 @@ struct Usuario : Codable {
     //let tipo_contrato:String
     let email:String
     let password:String
-    //let imagen:String
+    let imagen:String?
+    let createdAt:String?
+    let updatedAt:String?
     enum CodingKeys: String, CodingKey
     {
         case id = "_id"
@@ -55,6 +61,9 @@ struct Usuario : Codable {
         case cel = "cel"
         case email = "email"
         case password = "password"
+        case imagen = "imagen"
+        case createdAt = "createdAt"
+        case updatedAt = "updatedAt"
     }
 }
 struct UsuarioR : Codable {

@@ -10,13 +10,13 @@ import UIKit
 
 class MenuPrincipalViewController: UIViewController {
     
-    var lista_usuarios:[Usuarios] = []
+    var lista_usuarios:Usuarios?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = "http://localhost:6060/api/user/"
         print("antes de listar")
-        listarUsuarios(ruta: url) {
+        /*listarUsuarios(ruta: url) {
             print("hey")
             print(self.lista_usuarios)
             print("cantidad")
@@ -26,12 +26,13 @@ class MenuPrincipalViewController: UIViewController {
             }
             
         }
-        print("luego de listar")
+        print("luego de listar")*/
         // Do any additional setup after loading the view.
     }
     @IBAction func atrasTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    /*
     func listarUsuarios(ruta:String, completed: @escaping () -> () ) {
         let url:URL = URL(string: ruta)!
         var request = URLRequest(url: url)
@@ -61,7 +62,7 @@ class MenuPrincipalViewController: UIViewController {
             }
             }.resume()
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
