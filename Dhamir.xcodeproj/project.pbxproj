@@ -21,6 +21,7 @@
 		28D75C6C20E4049D001AF15F /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C6B20E4049D001AF15F /* PerfilViewController.swift */; };
 		28D75C6E20E4065F001AF15F /* ListUsuariosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C6D20E4065F001AF15F /* ListUsuariosViewController.swift */; };
 		28D75C7020E43757001AF15F /* CarpetasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C6F20E43757001AF15F /* CarpetasViewController.swift */; };
+		73543AD494AA37375C6ED12B /* Pods_Dhamir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55AC841D0637DDE75B8FB19 /* Pods_Dhamir.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,9 @@
 		28D75C6B20E4049D001AF15F /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		28D75C6D20E4065F001AF15F /* ListUsuariosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsuariosViewController.swift; sourceTree = "<group>"; };
 		28D75C6F20E43757001AF15F /* CarpetasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpetasViewController.swift; sourceTree = "<group>"; };
+		A4C814F5EFF4189195DC06EF /* Pods-Dhamir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dhamir.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dhamir/Pods-Dhamir.debug.xcconfig"; sourceTree = "<group>"; };
+		C55AC841D0637DDE75B8FB19 /* Pods_Dhamir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dhamir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB84A30C95A13077A820731C /* Pods-Dhamir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dhamir.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dhamir/Pods-Dhamir.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73543AD494AA37375C6ED12B /* Pods_Dhamir.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AD708E79EF4D097544D9F72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4C814F5EFF4189195DC06EF /* Pods-Dhamir.debug.xcconfig */,
+				DB84A30C95A13077A820731C /* Pods-Dhamir.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		28D75C3A20DAB529001AF15F = {
 			isa = PBXGroup;
 			children = (
 				28D75C4520DAB529001AF15F /* Dhamir */,
 				28D75C4420DAB529001AF15F /* Products */,
+				0AD708E79EF4D097544D9F72 /* Pods */,
+				9BA6D84DD3D8178C0F4FC3FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +107,14 @@
 			path = Dhamir;
 			sourceTree = "<group>";
 		};
+		9BA6D84DD3D8178C0F4FC3FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C55AC841D0637DDE75B8FB19 /* Pods_Dhamir.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28D75C5820DAB52A001AF15F /* Build configuration list for PBXNativeTarget "Dhamir" */;
 			buildPhases = (
+				567C8CF04444361C662EBC54 /* [CP] Check Pods Manifest.lock */,
 				28D75C3F20DAB529001AF15F /* Sources */,
 				28D75C4020DAB529001AF15F /* Frameworks */,
 				28D75C4120DAB529001AF15F /* Resources */,
+				82E30BE1D4A8E43EAFD5769B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +182,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		567C8CF04444361C662EBC54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dhamir-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E30BE1D4A8E43EAFD5769B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Dhamir/Pods-Dhamir-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/UTIKit/UTIKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UTIKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dhamir/Pods-Dhamir-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		28D75C3F20DAB529001AF15F /* Sources */ = {
@@ -314,6 +379,7 @@
 		};
 		28D75C5920DAB52A001AF15F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4C814F5EFF4189195DC06EF /* Pods-Dhamir.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +398,7 @@
 		};
 		28D75C5A20DAB52A001AF15F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB84A30C95A13077A820731C /* Pods-Dhamir.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
