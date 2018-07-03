@@ -417,7 +417,7 @@
         <!--Files-->
         <scene sceneID="fWA-Dt-doL">
             <objects>
-                <viewController id="3z3-Av-guv" customClass="CarpetasViewController" customModule="Dhamir" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3z3-Av-guv" customClass="SedesViewController" customModule="Dhamir" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mWW-z4-lwZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

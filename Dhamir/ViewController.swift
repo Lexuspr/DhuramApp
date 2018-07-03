@@ -109,6 +109,8 @@ class ViewController: UIViewController {
             menuPrincipalVC.usuario = sender as! [Result]
             let perfilVC = segue.destination.childViewControllers[0] as! PerfilViewController
             perfilVC.usuario = sender as! [Result]
+            let sedesVC = segue.destination.childViewControllers[2] as! SedesViewController
+            sedesVC.usuario = sender as! [Result]
         }
     }
     
