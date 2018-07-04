@@ -38,9 +38,15 @@ class SedesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.imageView?.image = UIImage(named: "carpeta")
+        cell.imageView?.image = UIImage(named: "sede")
         cell.textLabel?.text = lista_sedes?.data[indexPath.row].name
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sede_seleccionada = lista_sedes?.data[indexPath.row]
+//        print(sede_seleccionada!)
+        performSegue(withIdentifier: "navSegue", sender: sede_seleccionada!)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -61,6 +67,7 @@ class SedesViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let ruta1 = "http://localhost:6060/api/sedes/"
             let datos = ["name":self.nombre_sede.text!, "description":self.descripcion_sede.text!]
             self.crearSede(ruta: ruta1, token: self.usuario[0].token, datos: datos) {
+                print("crearSede Passed")
                 let ruta = "http://localhost:6060/api/sedes/"
                 self.obtenerSedes(ruta: ruta, token: self.usuario[0].token) {
                     self.tableView.reloadData()
@@ -100,15 +107,16 @@ class SedesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var request = URLRequest(url: url)
         let session = URLSession.shared
         request.httpMethod = "POST"
-        let params = datos
-        do{
-            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions.prettyPrinted)
+        let name = datos["name"] as! String
+        let descript = datos["description"] as! String
+        let postDataString = "name=\(name)&description=\(descript)"
+        let postData:NSData = postDataString.data(using: String.Encoding.utf8)! as NSData
+      
+            request.httpBody = postData as Data
             print("Primer do catch")
-        } catch {
-            // Catch any exception here
-        }
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
+      
+        request.addValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-type")
+        //request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue(token, forHTTPHeaderField: "Authorization")
         
         session.dataTask(with: request) { (data, response, error) in
@@ -122,18 +130,19 @@ class SedesViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     print(error)
                 }
             } else {
-                print(error)
+                print(error!)
             }
-        }
+        }.resume()
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let siguienteVC = segue.destination.childViewControllers[0] as! CarpetasViewController
+        siguienteVC.sede = sender as? DataS
+        siguienteVC.usuario = usuario as [Result]
     }
-    */
+ 
 
 }

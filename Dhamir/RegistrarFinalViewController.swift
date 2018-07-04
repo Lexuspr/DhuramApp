@@ -43,7 +43,7 @@ class RegistrarFinalViewController: UIViewController {
                 self.present(alertaRe, animated: true, completion: nil)
             }
         })
-        //performSegue(withIdentifier: "registradoSegue", sender: nil)
+        
     }
     @IBAction func atrasTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "retrocederNextSegue", sender: datosUsuario)
@@ -54,41 +54,37 @@ class RegistrarFinalViewController: UIViewController {
         var request = URLRequest(url: url)
         let session = URLSession.shared
         request.httpMethod = "POST"
-        //print("Entro funcion validar")
+       
         let params = datos
         do{
             request.httpBody = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions.prettyPrinted)
-            //print("Primer do catch")
+         
         } catch {
             // Catch any exception here
         }
-        //print("saliendo primer do catch")
+        
         request.addValue("application/json", forHTTPHeaderField: "Content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        //print("antes del segundo do catch")
+        
         session.dataTask(with: request) { (data,response,error) in
             if (data != nil) {
                 do {
-                    //let dict = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves)
-                    //print("entro segundo catch")
+                  
                     self.users = [try JSONDecoder().decode(ResultR.self, from: data!)]
                     print(self.users)
-                    //print("Si se valido")
+                  
                     DispatchQueue.main.async {
                         completed()
                     }
-                    //completed()
-                    //print("saliendo segundo do catch")
+                  
                 } catch {
-                    /*print("Aqui comienza el error catch################")
-                     print(error)*/
-                    //print("Entro al catch error :v")
+                    
                     print(error)
                     DispatchQueue.main.async {
                         completed()
                     }
                 }
-                //print("salio segundo do catch")
+              
             }
             }.resume()
         print("task resumido")

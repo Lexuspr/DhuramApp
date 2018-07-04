@@ -77,13 +77,14 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
         }.resume()
         
     }
+    //------------------------------------------------------------------------------
     func subirImagen(ruta: String, datos: Data, token: String, completed: @escaping () -> () ) {
         let url:URL = URL(string: ruta)!
         let boundary = generateBoundaryString()
         var request = URLRequest(url: url)
         let session = URLSession.shared
         request.httpMethod = "POST"
-        //let params = datos
+        
         
         var body = Data()
         let data = datos // Imagen
@@ -100,6 +101,7 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
             // Catch any exception here
     
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
         request.addValue(token, forHTTPHeaderField: "Authorization")
         
         session.dataTask(with: request) { (data,response,error) in
@@ -157,7 +159,7 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
             }.resume()
     }
-    
+    //-------------------------------------------
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let imagenSeleccionada = info[UIImagePickerControllerOriginalImage] as! UIImage
         imagePerfil.setImage(imagenSeleccionada, for: .normal)
@@ -185,6 +187,7 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func modificarTapped(_ sender: UIButton) {
+        
         if btnModificar.currentTitle == "Guardar" {
             let datos = ["email": txtEmail.text!, "cel": txtCelular.text!, "name": txtNombre.text!] as Dictionary<String, Any>
             let url = "http://localhost:6060/api/user/\(usuario[0].data.id)"

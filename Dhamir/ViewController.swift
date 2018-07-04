@@ -80,18 +80,11 @@ class ViewController: UIViewController {
         session.dataTask(with: request) { (data,response,error) in
             if (data != nil) {
                 do {
-                    //let dict = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves)
-                    print("entro segundo catch")
                     self.users = [try JSONDecoder().decode(Result.self, from: data!)]
-                    print("Si se valido")
                     DispatchQueue.main.async {
                         completed()
                     }
-                    //completed()
-                    print("saliendo segundo do catch")
                 } catch {
-                    /*print("Aqui comienza el error catch################")
-                    print(error)*/
                     print("Entro al catch error :v")
                     DispatchQueue.main.async {
                         completed()

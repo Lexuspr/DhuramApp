@@ -49,7 +49,7 @@ struct Usuario : Codable {
     //let tipo_user:String
     //let tipo_contrato:String
     let email:String
-    let password:String
+    
     let imagen:String?
     let createdAt:String?
     let updatedAt:String?
@@ -60,7 +60,7 @@ struct Usuario : Codable {
         case dni = "dni"
         case cel = "cel"
         case email = "email"
-        case password = "password"
+//        case password = "password"
         case imagen = "imagen"
         case createdAt = "createdAt"
         case updatedAt = "updatedAt"
