@@ -95,6 +95,7 @@ class ArchivosViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let siguienteVC = segue.destination as! VerFilesViewController
         siguienteVC.archivo = sender as! DataA
+        siguienteVC.usuario = sender as! [Result]
     }
  
 
