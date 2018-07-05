@@ -14,7 +14,7 @@ class MenuPrincipalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = "http://localhost:6060/api/user/"
+        let url = "http://35.237.186.173:6060/api/user/"
         print("antes de listar")
         /*listarUsuarios(ruta: url) {
             print("hey")

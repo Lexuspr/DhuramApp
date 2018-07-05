@@ -24,7 +24,7 @@ class CarpetasViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
         tableView.delegate  = self
         // Do any additional setup after loading the view.
-        let ruta = "http://localhost:6060/api/carpetas"
+        let ruta = "http://35.237.186.173/api/carpetas"
         let token = usuario[0].token
         obtenerCarpetas(ruta: ruta, token: token) {
             for carpeta in self.lista_carpetas!.data{
@@ -130,7 +130,7 @@ class CarpetasViewController: UIViewController, UITableViewDelegate, UITableView
             self.descripcion_carpeta = textField
         })
         let okAccion = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            let ruta1 = "http://localhost:6060/api/carpetas/"
+            let ruta1 = "http://35.237.186.173/api/carpetas/"
             let date = Date()
             let formatter = DateFormatter()
             formatter.dateFormat = "MM.dd.yyyy"
@@ -138,7 +138,7 @@ class CarpetasViewController: UIViewController, UITableViewDelegate, UITableView
             let datos = ["name":self.nombre_carpeta.text!, "description":self.descripcion_carpeta.text!, "fecha": result, "sedes": self.sede!.id]
             self.crearCarpeta(ruta: ruta1, token: self.usuario[0].token, datos: datos) {
                 print("crearSede Passed")
-                let ruta = "http://localhost:6060/api/carpetas"
+                let ruta = "http://35.237.186.173/api/carpetas"
                 let token = self.usuario[0].token
                 self.obtenerCarpetas(ruta: ruta, token: token) {
                     self.carpetas_sede.removeAll()

@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func iniciarSesionTapped(_ sender: UIButton) {
-        let url = "http://localhost:6060/api/user/signin"
+        let url = "http://35.237.186.173/api/user/signin"
         let usuario = txtUsuario.text!
         let contrasena = txtPassword.text!
         let datos = ["email": usuario, "password": contrasena] as Dictionary<String, Any>

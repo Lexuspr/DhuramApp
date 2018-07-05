@@ -12,6 +12,7 @@
 		2864DFA320ED34D000A72C47 /* carpeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2864DFA220ED34D000A72C47 /* carpeta.swift */; };
 		2864DFA520ED49E200A72C47 /* ArchivosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2864DFA420ED49E200A72C47 /* ArchivosViewController.swift */; };
 		2864DFA720ED4CCD00A72C47 /* archivo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2864DFA620ED4CCD00A72C47 /* archivo.swift */; };
+		2864DFAD20EE79B500A72C47 /* VerFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2864DFAC20EE79B500A72C47 /* VerFilesViewController.swift */; };
 		28D75C4720DAB529001AF15F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C4620DAB529001AF15F /* AppDelegate.swift */; };
 		28D75C4920DAB529001AF15F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D75C4820DAB529001AF15F /* ViewController.swift */; };
 		28D75C4C20DAB529001AF15F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D75C4A20DAB529001AF15F /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		2864DFA220ED34D000A72C47 /* carpeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpeta.swift; sourceTree = "<group>"; };
 		2864DFA420ED49E200A72C47 /* ArchivosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivosViewController.swift; sourceTree = "<group>"; };
 		2864DFA620ED4CCD00A72C47 /* archivo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = archivo.swift; sourceTree = "<group>"; };
+		2864DFAC20EE79B500A72C47 /* VerFilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerFilesViewController.swift; sourceTree = "<group>"; };
 		28D75C4320DAB529001AF15F /* Dhamir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dhamir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D75C4620DAB529001AF15F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28D75C4820DAB529001AF15F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2864DFAA20EE72FE00A72C47 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				28D75C4820DAB529001AF15F /* ViewController.swift */,
+				28D75C6320E184F2001AF15F /* MenuPrincipalViewController.swift */,
+				28D75C6520E29A3C001AF15F /* RegistrarViewController.swift */,
+				28D75C6720E2A164001AF15F /* RegistrarFinalViewController.swift */,
+				28D75C6B20E4049D001AF15F /* PerfilViewController.swift */,
+				28D75C6D20E4065F001AF15F /* ListUsuariosViewController.swift */,
+				28D75C6F20E43757001AF15F /* SedesViewController.swift */,
+				2864DFA020ED27AA00A72C47 /* CarpetasViewController.swift */,
+				2864DFA420ED49E200A72C47 /* ArchivosViewController.swift */,
+				2864DFAC20EE79B500A72C47 /* VerFilesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2864DFAB20EE732300A72C47 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				28D75C5F20DD5453001AF15F /* usuario.swift */,
+				2864DF9E20EC1D0D00A72C47 /* sede.swift */,
+				2864DFA620ED4CCD00A72C47 /* archivo.swift */,
+				2864DFA220ED34D000A72C47 /* carpeta.swift */,
+				28D75C6920E2AE03001AF15F /* validate.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		28D75C3A20DAB529001AF15F = {
 			isa = PBXGroup;
 			children = (
@@ -98,26 +129,14 @@
 		28D75C4520DAB529001AF15F /* Dhamir */ = {
 			isa = PBXGroup;
 			children = (
+				2864DFAB20EE732300A72C47 /* models */,
+				2864DFAA20EE72FE00A72C47 /* ViewControllers */,
 				28D75C4620DAB529001AF15F /* AppDelegate.swift */,
-				28D75C4820DAB529001AF15F /* ViewController.swift */,
 				28D75C4A20DAB529001AF15F /* Main.storyboard */,
 				28D75C5020DAB52A001AF15F /* Assets.xcassets */,
 				28D75C5220DAB52A001AF15F /* LaunchScreen.storyboard */,
 				28D75C5520DAB52A001AF15F /* Info.plist */,
 				28D75C4D20DAB529001AF15F /* Dhamir.xcdatamodeld */,
-				28D75C5F20DD5453001AF15F /* usuario.swift */,
-				28D75C6320E184F2001AF15F /* MenuPrincipalViewController.swift */,
-				28D75C6520E29A3C001AF15F /* RegistrarViewController.swift */,
-				28D75C6720E2A164001AF15F /* RegistrarFinalViewController.swift */,
-				28D75C6920E2AE03001AF15F /* validate.swift */,
-				28D75C6B20E4049D001AF15F /* PerfilViewController.swift */,
-				28D75C6D20E4065F001AF15F /* ListUsuariosViewController.swift */,
-				28D75C6F20E43757001AF15F /* SedesViewController.swift */,
-				2864DF9E20EC1D0D00A72C47 /* sede.swift */,
-				2864DFA020ED27AA00A72C47 /* CarpetasViewController.swift */,
-				2864DFA220ED34D000A72C47 /* carpeta.swift */,
-				2864DFA420ED49E200A72C47 /* ArchivosViewController.swift */,
-				2864DFA620ED4CCD00A72C47 /* archivo.swift */,
 			);
 			path = Dhamir;
 			sourceTree = "<group>";
@@ -247,6 +266,7 @@
 				28D75C6420E184F2001AF15F /* MenuPrincipalViewController.swift in Sources */,
 				28D75C7020E43757001AF15F /* SedesViewController.swift in Sources */,
 				2864DFA720ED4CCD00A72C47 /* archivo.swift in Sources */,
+				2864DFAD20EE79B500A72C47 /* VerFilesViewController.swift in Sources */,
 				2864DFA320ED34D000A72C47 /* carpeta.swift in Sources */,
 				28D75C6020DD5453001AF15F /* usuario.swift in Sources */,
 				2864DFA520ED49E200A72C47 /* ArchivosViewController.swift in Sources */,

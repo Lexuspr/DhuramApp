@@ -29,9 +29,11 @@ class RegistrarFinalViewController: UIViewController {
     @IBAction func registrarseTapped(_ sender: UIButton) {
         let usuario = txtUsuario.text!
         let password = txtPassword.text!
-        let url = "http://localhost:6060/api/user/signup"
+        let tipo_usuario = "alto"
+        let url = "http://35.237.186.173/api/user/signup"
         datosUsuario.updateValue(usuario, forKey: "email")
         datosUsuario.updateValue(password, forKey: "password")
+        datosUsuario.updateValue(tipo_usuario, forKey: "tipo_user")
         registrarUsuario(ruta: url, datos: datosUsuario, completed: {
             if self.users.count != 0 {
                 let alertaEx = UIAlertController(title: "Exito!!!!", message: "Te registraste correctamente", preferredStyle: .alert)

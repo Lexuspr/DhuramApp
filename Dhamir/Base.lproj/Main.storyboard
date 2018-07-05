@@ -36,7 +36,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="E10-2i-Hyn"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.043018703021280767" green="0.042810883199921927" blue="0.043226522842639614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
@@ -52,7 +52,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="sVZ-QI-L89"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.050043775624755982" green="0.049802018254588083" blue="0.050285532994923887" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
@@ -334,7 +334,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAY-8h-Wk4">
-                                <rect key="frame" x="112.5" y="378" width="150" height="34"/>
+                                <rect key="frame" x="112.5" y="418" width="150" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.15654430650684931" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="tlt-An-mRf"/>
@@ -355,7 +355,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrS-Za-vOA">
-                                <rect key="frame" x="112.5" y="427" width="150" height="34"/>
+                                <rect key="frame" x="112.5" y="467" width="150" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.14993578767123289" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="hGA-sy-E2I"/>
@@ -392,7 +392,7 @@
                             <constraint firstItem="DDO-kr-keM" firstAttribute="centerX" secondItem="zDD-fD-p8m" secondAttribute="centerX" id="gQM-gh-zVr"/>
                             <constraint firstItem="OrS-Za-vOA" firstAttribute="top" secondItem="NAY-8h-Wk4" secondAttribute="bottom" constant="15" id="l1B-3r-BM7"/>
                             <constraint firstItem="OrS-Za-vOA" firstAttribute="centerX" secondItem="zDD-fD-p8m" secondAttribute="centerX" id="miW-Cd-d0y"/>
-                            <constraint firstItem="NAY-8h-Wk4" firstAttribute="top" secondItem="cjh-cJ-tIo" secondAttribute="bottom" constant="10" id="okS-jA-Wed"/>
+                            <constraint firstItem="NAY-8h-Wk4" firstAttribute="top" secondItem="cjh-cJ-tIo" secondAttribute="bottom" constant="50" id="okS-jA-Wed"/>
                             <constraint firstItem="DAy-HO-dyk" firstAttribute="centerX" secondItem="zDD-fD-p8m" secondAttribute="centerX" id="tBQ-Pf-5Dy"/>
                             <constraint firstItem="DAy-HO-dyk" firstAttribute="top" secondItem="DDO-kr-keM" secondAttribute="bottom" constant="50" id="uKg-kK-Bc7"/>
                             <constraint firstItem="cjh-cJ-tIo" firstAttribute="top" secondItem="DAy-HO-dyk" secondAttribute="bottom" constant="20" id="vp6-mG-zam"/>
@@ -441,7 +441,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="026-cc-wgo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Usuarios" id="gZ2-Iq-pzQ"/>
+                    <tabBarItem key="tabBarItem" title="Usuarios" selectedImage="users_icon" id="gZ2-Iq-pzQ"/>
                     <connections>
                         <outlet property="tableView" destination="bOR-v1-KMW" id="390-tH-M7f"/>
                     </connections>
@@ -458,10 +458,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo3" translatesAutoresizingMaskIntoConstraints="NO" id="ejh-L9-Eie">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BSd-C6-PSi">
                                 <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -536,10 +532,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo3" translatesAutoresizingMaskIntoConstraints="NO" id="lDx-79-Gnh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -552,11 +544,42 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="K8r-U8-qfh" id="1YR-kM-HKV"/>
+                        <segue destination="9Li-rx-QyX" kind="show" identifier="verArchivoSegue" id="z3j-nl-AyJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cgd-MI-st2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2173.5999999999999" y="-1370.4647676161919"/>
+        </scene>
+        <!--Ver Files View Controller-->
+        <scene sceneID="CSR-lT-bWM">
+            <objects>
+                <viewController id="9Li-rx-QyX" customClass="VerFilesViewController" customModule="Dhamir" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feu-re-0zI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUt-4I-MMM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MUt-4I-MMM" firstAttribute="trailing" secondItem="dnp-VM-Ks0" secondAttribute="trailing" id="1vm-YI-zjS"/>
+                            <constraint firstItem="MUt-4I-MMM" firstAttribute="leading" secondItem="dnp-VM-Ks0" secondAttribute="leading" id="Ihb-Lo-Dge"/>
+                            <constraint firstItem="MUt-4I-MMM" firstAttribute="top" secondItem="dnp-VM-Ks0" secondAttribute="top" id="SYx-nw-mwg"/>
+                            <constraint firstItem="dnp-VM-Ks0" firstAttribute="bottom" secondItem="MUt-4I-MMM" secondAttribute="bottom" id="SdH-vN-2Zh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dnp-VM-Ks0"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="MUt-4I-MMM" id="NeV-nh-6QX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A25-j5-lbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3023" y="-1370"/>
         </scene>
         <!--Files-->
         <scene sceneID="fWA-Dt-doL">
@@ -600,8 +623,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xjl-Tc-N9y"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Files" id="xhd-jY-Eze"/>
+                    <tabBarItem key="tabBarItem" title="Files" selectedImage="sede" id="xhd-jY-Eze"/>
                     <connections>
+                        <outlet property="btn_sede" destination="okb-hb-RdW" id="xeU-Xy-koZ"/>
                         <outlet property="tableView" destination="XA7-o6-EXD" id="cky-dg-jpX"/>
                         <segue destination="f6b-jV-vy3" kind="presentation" identifier="navSegue" modalTransitionStyle="flipHorizontal" id="x7x-5N-aUn"/>
                     </connections>
@@ -731,7 +755,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5ee-pj-C8G"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Perfil" id="tqb-Tf-hhx"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" selectedImage="icon_perfil40" id="tqb-Tf-hhx"/>
                     <connections>
                         <outlet property="btnCancelar" destination="NKu-DF-D2h" id="nmI-pZ-2KI"/>
                         <outlet property="btnModificar" destination="wgi-Ot-ZvZ" id="VuN-UY-iFq"/>
@@ -749,11 +773,12 @@
         <scene sceneID="Qvp-ba-dfg">
             <objects>
                 <tabBarController id="Dr9-ie-phZ" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="carpeta" id="BOm-p1-H2s">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="BOm-p1-H2s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="1" green="0.11678851429999999" blue="0.1221563906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.97703762568332686" green="0.97231763715345576" blue="0.98175761421319796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="3Uu-ly-97g" kind="relationship" relationship="viewControllers" id="MvW-V3-Krw"/>
@@ -832,13 +857,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="carpeta" width="32" height="32"/>
         <image name="fmcloud" width="310" height="240"/>
         <image name="fondo" width="400" height="600"/>
         <image name="fondo2" width="644" height="1140"/>
-        <image name="fondo3" width="1280" height="960"/>
+        <image name="icon_perfil40" width="40" height="40"/>
         <image name="perfil_m" width="256" height="256"/>
+        <image name="sede" width="32" height="31"/>
         <image name="signout" width="50" height="50"/>
+        <image name="users_icon" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UKI-KI-uFC"/>

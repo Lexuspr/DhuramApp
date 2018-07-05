@@ -22,7 +22,7 @@ class ArchivosViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
-        let ruta = "http://localhost:6060/api/files/"
+        let ruta = "http://35.237.186.173/api/files/"
         let token = usuario[0].token
         obtenerArchivos(ruta: ruta, token: token) {
             for archivo in self.lista_archivos!.data{
@@ -83,15 +83,19 @@ class ArchivosViewController: UIViewController, UITableViewDelegate, UITableView
             }.resume()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let archivo_elegido:DataA = archivos_carpeta[indexPath.row]
+        performSegue(withIdentifier: "verArchivoSegue", sender: archivo_elegido)
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let siguienteVC = segue.destination as! VerFilesViewController
+        siguienteVC.archivo = sender as! DataA
     }
-    */
+ 
 
 }

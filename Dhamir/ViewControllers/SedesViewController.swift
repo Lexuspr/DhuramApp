@@ -9,20 +9,24 @@
 import UIKit
 
 class SedesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var carpetas = ["Mina PPP", "Constructora", "Depositorio SAC"]
+//    var carpetas = ["Mina PPP", "Constructora", "Depositorio SAC"]
     var nombre_sede = UITextField()
     var descripcion_sede = UITextField()
     var lista_sedes:Sedes?
     var usuario:[Result] = []
     var nuevaSede:SedeN?
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var btn_sede: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
-        let ruta = "http://localhost:6060/api/sedes/"
+        if usuario[0].data.tipo_user != "alto" {
+            btn_sede.isHidden = true
+        }
+        let ruta = "http://35.237.186.173/api/sedes/"
         obtenerSedes(ruta: ruta, token: usuario[0].token) {
             self.tableView.reloadData()
         }
@@ -64,11 +68,11 @@ class SedesViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.descripcion_sede = textField
         })
         let okAccion = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            let ruta1 = "http://localhost:6060/api/sedes/"
+            let ruta1 = "http://35.237.186.173/api/sedes/"
             let datos = ["name":self.nombre_sede.text!, "description":self.descripcion_sede.text!]
             self.crearSede(ruta: ruta1, token: self.usuario[0].token, datos: datos) {
                 print("crearSede Passed")
-                let ruta = "http://localhost:6060/api/sedes/"
+                let ruta = "http://35.237.186.173/api/sedes/"
                 self.obtenerSedes(ruta: ruta, token: self.usuario[0].token) {
                     self.tableView.reloadData()
                 }

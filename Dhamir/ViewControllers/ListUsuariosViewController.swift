@@ -23,7 +23,7 @@ class ListUsuariosViewController: UIViewController, UITableViewDelegate, UITable
 //        print("didload")
 //        print(lista_usuarios)
         // Do any additional setup after loading the view.
-        let url = "http://localhost:6060/api/user/"
+        let url = "http://35.237.186.173/api/user/"
         listarUsuarios(ruta: url, token: token){
 //            print("did load listar")
             self.tableView.reloadData()
@@ -84,7 +84,7 @@ class ListUsuariosViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let url = "http://localhost:6060/api/user/"
+        let url = "http://35.237.186.173/api/user/"
         token = usuario[0].token
         print("apunto will appear")
         listarUsuarios(ruta: url, token: token){

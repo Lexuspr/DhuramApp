@@ -42,11 +42,11 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
         txtEmail.isEnabled = false
         txtNombre.isEnabled = false
         // Do any additional setup after loading the view.
-        rutaUsuario = "http://localhost:6060/api/user/\(usuario[0].data.id)"
+        rutaUsuario = "http://35.237.186.173/api/user/\(usuario[0].data.id)"
         obtenerUsuario(ruta: rutaUsuario, token: token) {
             let imagenID = self.usuarioI?.data.imagen
             if imagenID != nil {
-                let ruta = "http://localhost:6060/api/user/get-img-users/" + imagenID!
+                let ruta = "http://35.237.186.173/api/user/get-img-users/" + imagenID!
                 self.obtenerImagen(ruta: ruta, token: self.token) {
                     
                     self.imagePerfil.setImage(self.imagenRecibida, for: .normal)
@@ -192,7 +192,7 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         if btnModificar.currentTitle == "Guardar" {
             let datos = ["email": txtEmail.text!, "cel": txtCelular.text!, "name": txtNombre.text!] as Dictionary<String, Any>
-            let url = "http://localhost:6060/api/user/\(usuario[0].data.id)"
+            let url = "http://35.237.186.173/api/user/\(usuario[0].data.id)"
             actualizarUsuario(ruta: url, datos: datos, token: token, completed: {
                 let alerta = UIAlertController(title: "Exito", message: "Se actualizaron los datos correctamente", preferredStyle: .alert)
                 let okAccion = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -206,7 +206,7 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
                 self.txtEmail.isEnabled = false
                 })
             
-            let ruta = "http://localhost:6060/api/user/upload-img-user/\(usuario[0].data.id)"
+            let ruta = "http://35.237.186.173/api/user/upload-img-user/\(usuario[0].data.id)"
             //let data = ["imageFile": imageStr]
             if imageStr != nil {
                 subirImagen(ruta: ruta, datos: imageStr!, token: token) {
@@ -226,11 +226,11 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
         btnModificar.setTitle("Modificar", for: .normal)
         txtNombre.borderStyle = UITextBorderStyle.none
         // ------------------------------------------------
-        rutaUsuario = "http://localhost:6060/api/user/\(usuario[0].data.id)"
+        rutaUsuario = "http://35.237.186.173/api/user/\(usuario[0].data.id)"
         obtenerUsuario(ruta: rutaUsuario, token: token) {
             let imagenID = self.usuarioI?.data.imagen
             if imagenID != nil {
-                let ruta = "http://localhost:6060/api/user/get-img-users/" + imagenID!
+                let ruta = "http://35.237.186.173/api/user/get-img-users/" + imagenID!
                 self.obtenerImagen(ruta: ruta, token: self.token) {
                     
                     self.imagePerfil.setImage(self.imagenRecibida, for: .normal)
