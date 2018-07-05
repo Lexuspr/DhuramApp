@@ -14,6 +14,7 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtDNI: UITextField!
     @IBOutlet weak var txtCelular: UITextField!
     @IBOutlet weak var btnContinuar: UIButton!
+    @IBOutlet weak var btnCancelar: UIButton!
     
     var datosUsuario:Dictionary<String, Any> = [:]
     var estado1 = false
@@ -21,6 +22,8 @@ class RegistrarViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnContinuar.layer.cornerRadius = 10
+        btnCancelar.layer.cornerRadius = 10
         btnContinuar.isHidden = true
         txtDNI.delegate = self
         txtCelular.delegate = self

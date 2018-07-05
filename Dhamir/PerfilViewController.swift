@@ -30,6 +30,8 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnModificar.layer.cornerRadius = 10
+        btnCancelar.layer.cornerRadius = 10
         token = usuario[0].token
         txtNombre.text? = usuario[0].data.name
         imagePicker.delegate = self

@@ -12,6 +12,8 @@ class RegistrarFinalViewController: UIViewController {
     
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var btnregistrarse: UIButton!
+    @IBOutlet weak var btnatras: UIButton!
     
     var datosUsuario:Dictionary<String, Any> = [:]
     
@@ -19,6 +21,8 @@ class RegistrarFinalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnatras.layer.cornerRadius = 10
+        btnregistrarse.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
 

@@ -12,11 +12,17 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var iniciarboton: UIButton!
+    @IBOutlet weak var registrarboton: UIButton!
     
     var users:[Result] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.sendSubview(toBack: imageView)
+        iniciarboton.layer.cornerRadius = 10
+        registrarboton.layer.cornerRadius = 10
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func iniciarSesionTapped(_ sender: UIButton) {
